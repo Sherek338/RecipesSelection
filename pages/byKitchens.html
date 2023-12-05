@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <title>Food service | По Мировым Кухням</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title green-block">Подбор рецепта</h1>
+      <nav class="navbar">
+        <div class="nav-item">
+          <a href="/pages/byIngredients.html">по ингредиентам</a>
+        </div>
+        <div class="nav-item active">
+          <a href="/pages/byKitchens.html">по мировым кухням</a>
+        </div>
+        <div class="nav-item">
+          <a href="/pages/recipeGenerator.html">генератор рецептов</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="by-kitchens main-block">
+      <div class="block">
+        <p class="description">
+          Если у вас есть особые предпочтения по национальным кухням разных
+          стран, мы с радостью предоставим вам выбор среди популярных кухонь
+          мира.
+        </p>
+        <form class="form">
+          <p class="description">Выберите желаемые кухни:</p>
+          <div class="checkboxes">
+            <div class="col">
+              <label class="checkbox description"
+                >Русская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Итальянская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Китайская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Турецкая кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Грузинская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Японская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+            </div>
+            <div class="col">
+              <label class="checkbox description"
+                >Узбекская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Татарская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Тайская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Французская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Индийская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+              <label class="checkbox description"
+                >Перуанская кухня<input type="checkbox" /><span
+                  class="checkmark"></span
+              ></label>
+            </div>
+          </div>
+          <button type="submit" class="btn green-block">Найти</button>
+        </form>
+      </div>
+      <div class="background"></div>
+    </main>
+  </body>
+</html>

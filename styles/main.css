@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+Reuse
+*/
+
+.background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background: url(../assets/bg.jpg) center bottom / contain no-repeat;
+  z-index: -1;
+}
+
+.main-block {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-block .block {
+  width: 90%;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 52px;
+  margin-top: 5%;
+  background-color: rgb(166, 255, 77);
+}
+
+.header .title {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-right: 50px;
+}
+
+.header .nav-item {
+  position: relative;
+  font-weight: 600;
+}
+
+.header .nav-item.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  display: block;
+  width: 16px;
+  height: 4px;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+.green-block,
+.white-block {
+  min-width: 464px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #000 2px solid;
+  border-radius: 40px;
+  color: #000;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.green-block {
+  background-color: #81e941;
+}
+
+.white-block {
+  background-color: #fff;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn.green-block:hover {
+  background-color: #62dc17;
+}
+
+.btn.green-block:active {
+  background-color: #71fa1d;
+}
+
+.btn.white-block:hover {
+  background-color: #dedede;
+}
+
+.btn.white-block:active {
+  background-color: #ababab;
+}
+
+.form {
+  position: relative;
+  height: 100%;
+  padding: 3% 40px;
+  border: 2px solid #000;
+  border-radius: 40px;
+  margin-top: 5%;
+  background-color: rgb(166, 255, 77);
+}
+
+.form .btn {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  min-width: 370px;
+  min-height: 52px;
+  margin-left: auto;
+}
+
+/*
+Index
+*/
+.index {
+  position: absolute;
+  inset: 0;
+  background: url(../assets/index.jpg) center top / contain no-repeat;
+}
+
+.index .block {
+  position: absolute;
+  inset: 0;
+  top: 40%;
+  height: 60%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+  background-color: #fff;
+}
+
+.index .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.index .nav-item a {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.index .title {
+  text-align: center;
+  font-size: 96px;
+  font-weight: 500;
+  font-style: italic;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*
+By Ingridients
+*/
+.by-ingredients .inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 55%;
+  height: 80%;
+}
+
+.by-ingredients .input {
+  width: 100%;
+  height: 52px;
+  padding: 20px;
+  border-radius: 40px;
+  border: 2px solid #000;
+  margin-top: 3%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+}
+
+/*
+By Kitchens
+*/
+
+.by-kitchens .checkboxes {
+  width: 50%;
+  height: 75%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.by-kitchens .col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.by-kitchens .checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.by-kitchens .checkbox input {
+  position: absolute;
+  opacity: 1;
+  height: 0;
+  width: 0;
+}
+
+.by-kitchens .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.by-kitchens .checkbox:hover .checkmark {
+  background-color: #ccc;
+}
+
+.by-kitchens .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.by-kitchens .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/*
+Recipe Generator
+*/
+
+.recipe-generator.main-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  background: none;
+}
+
+.recipe-generator .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  gap: 20px;
+  width: 60%;
+  height: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.recipe-generator .block .btn {
+  min-width: 370px;
+  min-height: 52px;
+  margin-top: 6%;
+  font-size: 24px;
+}
+
+.recipe-generator .recipe-block {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 30px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  background-color: rgba(164, 251, 77, 1);
+}
+
+.recipe-generator .recipe-block .img {
+  width: 311px;
+  height: auto;
+  border-radius: 50px;
+  border: 2px solid #000;
+  overflow: hidden;
+}
+
+.recipe-generator .recipe-block .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.recipe-generator .recipe-block .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 60%;
+}
+
+.recipe-generator .recipe-block .info .title,
+.recipe-generator .recipe-block .info .description {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.recipe-generator .recipe-block .info .btn {
+  min-width: 300px;
+  min-height: 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  /*
+  Reuse
+  */
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: 200px;
+  }
+
+  .header .title {
+    left: 0;
+    min-width: 100%;
+  }
+
+  .header .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /*
+  Index
+  */
+
+  .index .title {
+    font-size: 76px;
+  }
+
+  /*
+  By Ingridients
+  */
+
+  .by-ingredients .inputs {
+    width: 80%;
+  }
+
+  /*
+  Recipe Generator
+  */
+
+  .recipe-generator .block {
+    width: 100%;
+  }
+
+  .recipe-generator .recipe-block {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  /*
+  Reuse
+  */
+
+  .green-block,
+  .white-block {
+    font-size: 25px;
+    min-width: 50px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .description {
+    padding: 0 20px;
+  }
+
+  .main-block .block {
+    width: 100%;
+  }
+
+  .form {
+    border-radius: 0;
+    padding: 5px;
+    padding-top: 30px;
+  }
+
+  .form .btn {
+    min-width: 50px;
+    left: 0;
+    right: 0;
+  }
+
+  /*
+  Index
+  */
+  .index {
+    width: 100%;
+    background-position: center -30%;
+    background-size: auto 50%;
+  }
+
+  .index .block {
+    padding-top: 100px;
+    top: 25%;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .index .title {
+    font-size: 33px;
+  }
+
+  .index .btn {
+    min-width: 100%;
+  }
+
+  /*
+  By Ingridients
+  */
+
+  .by-ingredients .inputs {
+    width: 100%;
+  }
+
+  /*
+  By Kitchens
+  */
+
+  .by-kitchens .checkboxes {
+    width: 100%;
+    flex-direction: column;
+    justify-content: none;
+  }
+
+  /*
+  Generator Recipe
+  */
+
+  .recipe-generator .block .btn {
+    min-width: 50px;
+  }
+
+  .recipe-generator .recipe-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe-generator .recipe-block .img {
+    width: 90%;
+  }
+
+  .recipe-generator .recipe-block .info {
+    display: block;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+
+  .recipe-generator .recipe-block .info .btn {
+    min-width: 50px;
+  }
+}
