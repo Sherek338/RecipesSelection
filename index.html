@@ -22,29 +22,46 @@
         </section>
       </section>
 
-      <section class="by-ingredients main-block">
-        <div class="block">
-          <p class="description">
-            Тщательно выберите продукты! Мы постараемся подобрать для вас как
-            можно больше доступных вам рецептов.
-          </p>
-          <form class="form" id="recipes">
-            <div class="inputs">
-              <label
-                ><div class="description">Введите желаемые ингредиенты:</div>
-                <input type="text" class="input" placeholder="..."
-              /></label>
-              <label
-                ><div class="description">
-                  Добавьте ингредиенты, которые необходимо исключить:
-                </div>
-                <input type="text" class="input" placeholder="..."
-              /></label>
+      <div class="by-ingredients">
+        <header class="header" id="recipes">
+          <h1 class="title green-block">Подбор рецепта</h1>
+          <nav class="navbar">
+            <div class="nav-item active">
+              <a href="/index.html">по ингредиентам</a>
             </div>
-            <button type="submit" class="btn green-block">Найти</button>
-          </form>
-        </div>
-      </section>
+            <div class="nav-item">
+              <a href="/pages/byKitchens.html">по мировым кухням</a>
+            </div>
+            <div class="nav-item">
+              <a href="/pages/recipeGenerator.html">генератор рецептов</a>
+            </div>
+          </nav>
+        </header>
+
+        <section class="main-block">
+          <div class="block">
+            <p class="description">
+              Тщательно выберите продукты! Мы постараемся подобрать для вас как
+              можно больше доступных вам рецептов.
+            </p>
+            <form class="form">
+              <div class="inputs">
+                <label
+                  ><div class="description">Введите желаемые ингредиенты:</div>
+                  <input type="text" class="input" placeholder="..."
+                /></label>
+                <label
+                  ><div class="description">
+                    Добавьте ингредиенты, которые необходимо исключить:
+                  </div>
+                  <input type="text" class="input" placeholder="..."
+                /></label>
+              </div>
+              <button type="submit" class="btn green-block">Найти</button>
+            </form>
+          </div>
+        </section>
+      </div>
     </main>
   </body>
 </html>
