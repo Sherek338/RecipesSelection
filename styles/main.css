@@ -22,9 +22,7 @@ Reuse
 
 .background {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   height: 100%;
   background: url(../assets/bg.jpg) center bottom / contain no-repeat;
   z-index: -1;
@@ -85,7 +83,7 @@ Reuse
 
 .green-block,
 .white-block {
-  min-width: 464px;
+  width: 464px;
   min-height: 70px;
   display: flex;
   justify-content: center;
@@ -146,7 +144,7 @@ Reuse
   position: absolute;
   right: 15px;
   bottom: 15px;
-  min-width: 370px;
+  width: 370px;
   min-height: 52px;
   margin-left: auto;
 }
@@ -306,7 +304,7 @@ Recipe Generator
 }
 
 .recipe-generator .block .btn {
-  min-width: 370px;
+  width: 370px;
   min-height: 52px;
   margin-top: 6%;
   font-size: 24px;
@@ -324,16 +322,18 @@ Recipe Generator
 }
 
 .recipe-generator .recipe-block .img {
+  display: flex;
+  justify-content: center;
   width: 311px;
-  height: auto;
+  height: 280px;
   border-radius: 50px;
-  border: 2px solid #000;
   overflow: hidden;
 }
 
 .recipe-generator .recipe-block .img img {
-  width: 100%;
   height: 100%;
+  border-radius: 50px;
+  border: 2px solid #000;
 }
 
 .recipe-generator .recipe-block .info {
@@ -350,15 +350,23 @@ Recipe Generator
   font-weight: 300;
 }
 
+.recipe-generator .recipe-block .info .title {
+  margin-bottom: 20px;
+}
+
+.recipe-generator .recipe-block .info .description {
+  margin-bottom: 50px;
+}
+
 .recipe-generator .recipe-block .info .btn {
-  min-width: 300px;
+  width: 300px;
   min-height: 40px;
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /*
   Reuse
   */
@@ -414,7 +422,7 @@ Recipe Generator
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   /*
   Reuse
   */
@@ -422,7 +430,7 @@ Recipe Generator
   .green-block,
   .white-block {
     font-size: 25px;
-    min-width: 50px;
+    width: 100%;
   }
 
   .btn {
@@ -444,7 +452,7 @@ Recipe Generator
   }
 
   .form .btn {
-    min-width: 50px;
+    width: 100%;
     left: 0;
     right: 0;
   }
@@ -502,6 +510,7 @@ Recipe Generator
   .recipe-generator .recipe-block {
     flex-direction: column;
     align-items: center;
+    padding: 30px 5px;
   }
 
   .recipe-generator .recipe-block .img {
@@ -513,6 +522,10 @@ Recipe Generator
     width: 80%;
     text-align: center;
     padding-bottom: 60px;
+  }
+
+  .recipe-generator .recipe-block .info .description {
+    padding: 0;
   }
 
   .recipe-generator .recipe-block .info .btn {
