@@ -1,19 +1,156 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 
+/*
+Reset
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  height: 100%;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+Style
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.green-block,
+a {
   font-family: "Inter", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: #000;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 /*
@@ -46,7 +183,7 @@ Reuse
   justify-content: end;
   align-items: center;
   height: 52px;
-  margin-top: 5%;
+  margin-top: 50px;
   background-color: rgb(166, 255, 77);
 }
 
@@ -68,6 +205,14 @@ Reuse
   font-weight: 600;
 }
 
+.header .nav-item a {
+  transition: all 0.2s;
+}
+
+.header .nav-item:hover a {
+  color: #36790d;
+}
+
 .header .nav-item.active::after {
   content: "";
   position: absolute;
@@ -75,7 +220,7 @@ Reuse
   bottom: -10px;
   transform: translateX(-50%);
   display: block;
-  width: 16px;
+  width: 161px;
   height: 4px;
   border-radius: 40px;
   background-color: #fff;
@@ -133,7 +278,8 @@ Reuse
 .form {
   position: relative;
   height: 100%;
-  padding: 3% 40px;
+  padding: 5px 40px;
+  padding-bottom: 50px;
   border: 2px solid #000;
   border-radius: 40px;
   margin-top: 5%;
@@ -149,228 +295,7 @@ Reuse
   margin-left: auto;
 }
 
-/*
-Index
-*/
-.index {
-  position: absolute;
-  inset: 0;
-  background: url(../assets/index.jpg) center top / contain no-repeat;
-}
-
-.index .block {
-  position: absolute;
-  inset: 0;
-  top: 40%;
-  height: 60%;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10%;
-  background-color: #fff;
-}
-
-.index .navbar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-}
-
-.index .nav-item a {
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.index .title {
-  text-align: center;
-  font-size: 96px;
-  font-weight: 500;
-  font-style: italic;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/*
-By Ingridients
-*/
-.by-ingredients .inputs {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 55%;
-  height: 80%;
-}
-
-.by-ingredients .input {
-  width: 100%;
-  height: 52px;
-  padding: 20px;
-  border-radius: 40px;
-  border: 2px solid #000;
-  margin-top: 3%;
-  font-size: 24px;
-  font-weight: 500;
-  color: #000;
-}
-
-/*
-By Kitchens
-*/
-
-.by-kitchens .checkboxes {
-  width: 50%;
-  height: 75%;
-  margin-top: 2%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.by-kitchens .col {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.by-kitchens .checkbox {
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-}
-
-.by-kitchens .checkbox input {
-  position: absolute;
-  opacity: 1;
-  height: 0;
-  width: 0;
-}
-
-.by-kitchens .checkbox .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  border: 2px solid #000;
-  border-radius: 50%;
-  background-color: #fff;
-}
-
-.by-kitchens .checkbox:hover .checkmark {
-  background-color: #ccc;
-}
-
-.by-kitchens .checkbox .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #000;
-}
-
-.by-kitchens .checkbox input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/*
-Recipe Generator
-*/
-
-.recipe-generator.main-block {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  background: none;
-}
-
-.recipe-generator .block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  text-align: center;
-  gap: 20px;
-  width: 60%;
-  height: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-
-.recipe-generator .block .btn {
-  width: 370px;
-  min-height: 52px;
-  margin-top: 6%;
-  font-size: 24px;
-}
-
-.recipe-generator .recipe-block {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 30px;
-  border: 2px solid #000;
-  border-radius: 50px;
-  background-color: rgba(164, 251, 77, 1);
-}
-
-.recipe-generator .recipe-block .img {
-  display: flex;
-  justify-content: center;
-  width: 311px;
-  height: 280px;
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-.recipe-generator .recipe-block .img img {
-  height: 100%;
-  border-radius: 50px;
-  border: 2px solid #000;
-}
-
-.recipe-generator .recipe-block .info {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 60%;
-}
-
-.recipe-generator .recipe-block .info .title,
-.recipe-generator .recipe-block .info .description {
-  font-size: 24px;
-  font-weight: 300;
-}
-
-.recipe-generator .recipe-block .info .title {
-  margin-bottom: 20px;
-}
-
-.recipe-generator .recipe-block .info .description {
-  margin-bottom: 50px;
-}
-
-.recipe-generator .recipe-block .info .btn {
-  width: 300px;
-  min-height: 40px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 @media (max-width: 1200px) {
-  /*
-  Reuse
-  */
-
   .header {
     display: flex;
     width: 100%;
@@ -393,40 +318,9 @@ Recipe Generator
     margin: 0 auto;
     text-align: center;
   }
-  /*
-  Index
-  */
-
-  .index .title {
-    font-size: 76px;
-  }
-
-  /*
-  By Ingridients
-  */
-
-  .by-ingredients .inputs {
-    width: 80%;
-  }
-
-  /*
-  Recipe Generator
-  */
-
-  .recipe-generator .block {
-    width: 100%;
-  }
-
-  .recipe-generator .recipe-block {
-    border-radius: 0;
-  }
 }
 
 @media (max-width: 800px) {
-  /*
-  Reuse
-  */
-
   .green-block,
   .white-block {
     font-size: 25px;
@@ -455,80 +349,6 @@ Recipe Generator
     width: 100%;
     left: 0;
     right: 0;
-  }
-
-  /*
-  Index
-  */
-  .index {
-    width: 100%;
-    background-position: center -30%;
-    background-size: auto 50%;
-  }
-
-  .index .block {
-    padding-top: 100px;
-    top: 25%;
-    align-items: center;
-    justify-content: start;
-  }
-
-  .index .title {
-    font-size: 33px;
-  }
-
-  .index .btn {
-    min-width: 100%;
-  }
-
-  /*
-  By Ingridients
-  */
-
-  .by-ingredients .inputs {
-    width: 100%;
-  }
-
-  /*
-  By Kitchens
-  */
-
-  .by-kitchens .checkboxes {
-    width: 100%;
-    flex-direction: column;
-    justify-content: none;
-  }
-
-  /*
-  Generator Recipe
-  */
-
-  .recipe-generator .block .btn {
-    min-width: 50px;
-  }
-
-  .recipe-generator .recipe-block {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 5px;
-  }
-
-  .recipe-generator .recipe-block .img {
-    width: 90%;
-  }
-
-  .recipe-generator .recipe-block .info {
-    display: block;
-    width: 80%;
-    text-align: center;
-    padding-bottom: 60px;
-  }
-
-  .recipe-generator .recipe-block .info .description {
-    padding: 0;
-  }
-
-  .recipe-generator .recipe-block .info .btn {
-    min-width: 50px;
+    bottom: 8px;
   }
 }

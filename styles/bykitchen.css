@@ -1,0 +1,84 @@
+/*
+By Kitchens
+*/
+
+.by-kitchens .checkboxes {
+  width: 50%;
+  height: 75%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.by-kitchens .col {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.by-kitchens .checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.by-kitchens .checkbox input {
+  position: absolute;
+  opacity: 1;
+  height: 0;
+  width: 0;
+}
+
+.by-kitchens .checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.by-kitchens .checkbox:hover .checkmark {
+  background-color: #ccc;
+}
+
+.by-kitchens .checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.by-kitchens .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .by-kitchens .checkboxes {
+    width: 80%;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .by-kitchens .checkboxes {
+    width: 100%;
+    padding: 0 30px;
+    flex-direction: column;
+    justify-content: none;
+    gap: 10px;
+  }
+
+  .by-kitchens .col {
+    gap: 10px;
+  }
+}
