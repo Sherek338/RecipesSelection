@@ -12,28 +12,48 @@
 			<section class="index">
 				<section class="block">
 					<nav class="navbar">
-						<div class="nav-item logo">Логотип</div>
-						<div class="nav-item">О нас</div>
-						<div class="nav-item">Поддержка</div>
+						<div class="nav-item logo"><a href="#logo">Логотип</a></div>
+						<div class="nav-item"><a href="#about-us">О нас</a></div>
+						<div class="nav-item"><a href="#help">Поддержка</a></div>
 					</nav>
-					<div class="nav-menu-wrapper">
-						<div class="nav-menu">
-							<h3>Логотип</h3>
-							<p>Text Логотип</p>
-						</div>
-						<div class="nav-menu">
-							<h3>О нас</h3>
-							<p>Текст о нас</p>
-						</div>
-						<div class="nav-menu">
-							<h3>Поддержка</h3>
-							<p>Номер</p>
-						</div>
-					</div>
 					<h1 class="title">Готовьте с нами!</h1>
 					<a class="btn green-block" href="#recipes">Подобрать рецепт</a>
 				</section>
 			</section>
+
+			<div class="content-wrapper">
+				<section class="content" id="logo">
+					<h3>Logo</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+						odit necessitatibus unde, perspiciatis nobis velit quibusdam dicta
+						dolorem impedit temporibus architecto rerum excepturi atque eum,
+						quos explicabo accusamus dignissimos. Nisi.
+					</p>
+				</section>
+				<section class="content" id="about-us">
+					<h3>About us</h3>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
+						molestias vero recusandae consequuntur nesciunt praesentium, officia
+						nostrum minima, sequi nobis ullam id aliquam, repudiandae fugit
+						eaque. Nam quas cum expedita consectetur nihil? Ullam in iure non
+						voluptates esse sequi quidem porro culpa minus, vero ut asperiores!
+						Officiis, commodi ratione!
+					</p>
+				</section>
+				<section class="content" id="help">
+					<h3>Help</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+						ut doloribus vero non deserunt itaque eum expedita fugit cupiditate
+						harum, assumenda accusamus debitis molestias asperiores dignissimos
+						consequuntur possimus unde quos, ipsa fugiat aperiam labore incidunt
+						nam! Hic minus, provident, neque explicabo obcaecati quae deleniti
+						tempora quis inventore placeat velit.
+					</p>
+				</section>
+			</div>
 
 			<div class="by-ingredients">
 				<header class="header" id="recipes">
@@ -76,22 +96,5 @@
 				</section>
 			</div>
 		</main>
-		<script>
-			const navMenu = document.querySelectorAll(
-				'.index .nav-menu-wrapper .nav-menu'
-			);
-			const navItems = document.querySelectorAll('.index .nav-item');
-
-			console.log(navMenu);
-
-			navItems.forEach((item, index) =>
-				item.addEventListener('click', () => {
-					navItems.forEach((nav) => nav.classList.remove('active'));
-					item.classList.add('active');
-					navMenu.forEach((menu) => menu.classList.remove('visible'));
-					navMenu[index].classList.add('visible');
-				})
-			);
-		</script>
 	</body>
 </html>
