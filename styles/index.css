@@ -2,63 +2,116 @@
 Index
 */
 .index {
-	position: absolute;
-	inset: 0;
-	background: url(../assets/index.jpg) center top / contain no-repeat;
-	z-index: 0;
+  position: absolute;
+  inset: 0;
+  background: url(../assets/index.jpg) center top / contain no-repeat;
+  z-index: 0;
 }
 
 .index .block {
-	position: absolute;
-	inset: 0;
-	top: 40%;
-	height: 60%;
-	padding-top: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 10%;
-	background-color: #fff;
+  position: absolute;
+  inset: 0;
+  top: 40%;
+  height: 60%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+  background-color: #fff;
 }
 
 .index .navbar {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
 }
 
 .index .navbar .logo {
-	margin-right: 5%;
+  margin-right: 5%;
 }
 
 .index .nav-item a {
-	font-size: 18px;
-	cursor: pointer;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .index .title {
-	text-align: center;
-	font-size: 96px;
-	font-weight: 500;
-	font-style: italic;
-	text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 96px;
+  font-weight: 500;
+  font-style: italic;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .content-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-wrapper .content {
-	padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.content-wrapper .content:last-child {
+  margin-bottom: 100px;
+}
+
+.content-wrapper .content .img-wrapper {
+  width: 30%;
+}
+.content-wrapper .content .img-wrapper img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.content-wrapper .content .grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 50px;
+}
+
+.content-wrapper .content .grid .row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.content-wrapper .content .grid .row .cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content-wrapper .content .grid .row .cell .img-wrapper,
+.content-wrapper .content .grid .row .cell .img-wrapper img {
+  width: 100%;
+}
+
+.content-wrapper .content a[href^="mailto"] {
+  text-decoration: underline;
 }
 
 .content-wrapper .content h3 {
-	font-size: 30px;
-	margin-bottom: 15px;
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.content-wrapper .content .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content-wrapper .content .subtitle {
+  font-size: 18px;
 }
 
 /*
@@ -66,116 +119,129 @@ By Ingridients
 */
 
 .by-ingredients {
-	background: url(../assets/bg.jpg) center bottom / contain no-repeat;
-	padding-top: 30vh;
-	padding-bottom: 150px;
-	z-index: 1;
+  background: url(../assets/bg.jpg) center bottom / contain no-repeat;
+  padding-top: 100vh;
+  padding-bottom: 150px;
+  z-index: 1;
 }
 
 .by-ingredients .inputs {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 55%;
-	height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 55%;
+  height: 80%;
 }
 
 .by-ingredients .input {
-	width: 100%;
-	height: 52px;
-	padding: 20px;
-	border-radius: 40px;
-	border: 2px solid #000;
-	margin-top: 3%;
-	font-size: 24px;
-	font-weight: 500;
-	color: #000;
+  width: 100%;
+  height: 52px;
+  padding: 20px;
+  border-radius: 40px;
+  border: 2px solid #000;
+  margin-top: 3%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
 }
 
 @media (max-width: 1200px) {
-	/*
+  /*
   Index
   */
 
-	.index {
-		width: 100%;
-		background-position: center -30%;
-		background-size: auto 50%;
-	}
+  .index {
+    width: 100%;
+    background-position: center -30%;
+    background-size: auto 50%;
+  }
 
-	.index .title {
-		font-size: 76px;
-	}
+  .index .title {
+    font-size: 76px;
+  }
 
-	.content-wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 80%;
-		padding-top: 100vh;
-	}
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-	/*
+  .content-wrapper .content {
+    margin-top: 50px;
+  }
+
+  .content-wrapper .content .img-wrapper {
+    width: 60%;
+  }
+
+  /*
   By Ingridients
   */
 
-	.by-ingredients .inputs {
-		width: 80%;
-	}
+  .by-ingredients .inputs {
+    width: 80%;
+  }
 }
 
 @media (max-width: 800px) {
-	/*
+  /*
   Index
   */
-	.index .block {
-		padding-top: 50px;
-		top: 35%;
-		align-items: center;
-		justify-content: start;
-	}
+  .index .block {
+    padding-top: 50px;
+    top: 35%;
+    align-items: center;
+    justify-content: start;
+  }
 
-	.index .navbar {
-		flex-direction: column;
-		gap: 15px;
-	}
+  .index .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-	.index .navbar .logo {
-		margin-right: 0;
-	}
+  .index .navbar .logo {
+    margin-right: 0;
+  }
 
-	.index .title {
-		font-size: 33px;
-	}
+  .index .title {
+    font-size: 33px;
+  }
 
-	.index .btn {
-		min-width: 100%;
-	}
+  .index .btn {
+    min-width: 100%;
+  }
 
-	/*
+  /*
   By Ingridients
   */
 
-	.by-ingredients .inputs {
-		width: 100%;
-	}
+  .by-ingredients .inputs {
+    width: 100%;
+  }
 
-	.content-wrapper {
-		width: 100%;
-		padding-top: 100vh;
-	}
+  .content-wrapper {
+    width: 100%;
+  }
 
-	.content-wrapper .content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 50px 10px;
-		text-align: center;
-	}
+  .content-wrapper .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px;
+    text-align: center;
+  }
 
-	.content-wrapper .content h3 {
-		font-size: 30px;
-		margin-bottom: 15px;
-	}
+  .content-wrapper .content .img-wrapper {
+    width: 80%;
+  }
+
+  .content-wrapper .content .grid .row {
+    flex-direction: column;
+  }
+
+  .content-wrapper .content h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
 }

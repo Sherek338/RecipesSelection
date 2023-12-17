@@ -1,100 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./styles/main.css" />
-		<link rel="stylesheet" href="./styles/index.css" />
-		<title>Food service</title>
-	</head>
-	<body>
-		<main>
-			<section class="index">
-				<section class="block">
-					<nav class="navbar">
-						<div class="nav-item logo"><a href="#logo">Логотип</a></div>
-						<div class="nav-item"><a href="#about-us">О нас</a></div>
-						<div class="nav-item"><a href="#help">Поддержка</a></div>
-					</nav>
-					<h1 class="title">Готовьте с нами!</h1>
-					<a class="btn green-block" href="#recipes">Подобрать рецепт</a>
-				</section>
-			</section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Food service</title>
+  </head>
+  <body>
+    <main>
+      <section class="index">
+        <section class="block">
+          <nav class="navbar">
+            <div class="nav-item logo"><a href="#logo">Логотип</a></div>
+            <div class="nav-item"><a href="#about-us">О нас</a></div>
+            <div class="nav-item"><a href="#help">Поддержка</a></div>
+          </nav>
+          <h1 class="title">Готовьте с нами!</h1>
+          <a class="btn green-block" href="#recipes">Подобрать рецепт</a>
+        </section>
+      </section>
 
-			<div class="content-wrapper">
-				<section class="content" id="logo">
-					<h3>Logo</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-						odit necessitatibus unde, perspiciatis nobis velit quibusdam dicta
-						dolorem impedit temporibus architecto rerum excepturi atque eum,
-						quos explicabo accusamus dignissimos. Nisi.
-					</p>
-				</section>
-				<section class="content" id="about-us">
-					<h3>About us</h3>
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex modi
-						molestias vero recusandae consequuntur nesciunt praesentium, officia
-						nostrum minima, sequi nobis ullam id aliquam, repudiandae fugit
-						eaque. Nam quas cum expedita consectetur nihil? Ullam in iure non
-						voluptates esse sequi quidem porro culpa minus, vero ut asperiores!
-						Officiis, commodi ratione!
-					</p>
-				</section>
-				<section class="content" id="help">
-					<h3>Help</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
-						ut doloribus vero non deserunt itaque eum expedita fugit cupiditate
-						harum, assumenda accusamus debitis molestias asperiores dignissimos
-						consequuntur possimus unde quos, ipsa fugiat aperiam labore incidunt
-						nam! Hic minus, provident, neque explicabo obcaecati quae deleniti
-						tempora quis inventore placeat velit.
-					</p>
-				</section>
-			</div>
+      <div class="by-ingredients">
+        <header class="header" id="recipes">
+          <h1 class="title green-block">Подбор рецепта</h1>
+          <nav class="navbar">
+            <div class="nav-item active">
+              <a href="./index.html">по ингредиентам</a>
+            </div>
+            <div class="nav-item">
+              <a href="./pages/byKitchens.html">по мировым кухням</a>
+            </div>
+            <div class="nav-item">
+              <a href="./pages/recipeGenerator.html">генератор рецептов</a>
+            </div>
+          </nav>
+        </header>
 
-			<div class="by-ingredients">
-				<header class="header" id="recipes">
-					<h1 class="title green-block">Подбор рецепта</h1>
-					<nav class="navbar">
-						<div class="nav-item active">
-							<a href="./index.html">по ингредиентам</a>
-						</div>
-						<div class="nav-item">
-							<a href="./pages/byKitchens.html">по мировым кухням</a>
-						</div>
-						<div class="nav-item">
-							<a href="./pages/recipeGenerator.html">генератор рецептов</a>
-						</div>
-					</nav>
-				</header>
+        <section class="main-block">
+          <div class="block">
+            <p class="description">Тщательно выберите продукты! Мы постараемся подобрать для вас как можно больше доступных вам рецептов.</p>
+            <form class="form">
+              <div class="inputs">
+                <label
+                  ><div class="description">Введите желаемые ингредиенты:</div>
+                  <input type="text" class="input" placeholder="..."
+                /></label>
+                <label
+                  ><div class="description">Добавьте ингредиенты, которые необходимо исключить:</div>
+                  <input type="text" class="input" placeholder="..."
+                /></label>
+              </div>
+              <button type="submit" class="btn green-block">Найти</button>
+            </form>
+          </div>
+        </section>
+      </div>
 
-				<section class="main-block">
-					<div class="block">
-						<p class="description">
-							Тщательно выберите продукты! Мы постараемся подобрать для вас как
-							можно больше доступных вам рецептов.
-						</p>
-						<form class="form">
-							<div class="inputs">
-								<label
-									><div class="description">Введите желаемые ингредиенты:</div>
-									<input type="text" class="input" placeholder="..."
-								/></label>
-								<label
-									><div class="description">
-										Добавьте ингредиенты, которые необходимо исключить:
-									</div>
-									<input type="text" class="input" placeholder="..."
-								/></label>
-							</div>
-							<button type="submit" class="btn green-block">Найти</button>
-						</form>
-					</div>
-				</section>
-			</div>
-		</main>
-	</body>
+      <div class="content-wrapper">
+        <section class="content" id="logo">
+          <h3>Логотип</h3>
+          <figure class="img-wrapper">
+            <img src="./assets/Рисунок7.png" alt="Logo" />
+            <figcaption>Кухни всего мира на одном сайте</figcaption>
+          </figure>
+        </section>
+        <section class="content" id="about-us">
+          <h3>Наша команда</h3>
+          <div class="grid">
+            <div class="row">
+              <div class="cell">
+                <div class="img-wrapper"><img src="./assets/Рисунок1.png" alt="Фото участника" /></div>
+                <h3 class="title">Чежегов Глеб Павлович</h3>
+                <p class="subtitle">Руководитель проекта</p>
+              </div>
+              <div class="cell">
+                <div class="img-wrapper"><img src="./assets/Рисунок1.png" alt="Фото участника" /></div>
+                <h3 class="title">Чежегов Глеб Павлович</h3>
+                <p class="subtitle">Руководитель проекта</p>
+              </div>
+              <div class="cell">
+                <div class="img-wrapper"><img src="./assets/Рисунок2.png" alt="Фото участника" /></div>
+                <h3 class="title">Смирнова Карина Андреевна</h3>
+                <p class="subtitle">Менеджер</p>
+              </div>
+              <div class="cell">
+                <div class="img-wrapper"><img src="./assets/Рисунок3.png" alt="Фото участника" /></div>
+                <h3 class="title">Скоблилова Виктория Васильевна</h3>
+                <p class="subtitle">UX/UI исследователь</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell">
+                <div class="img-wrapper"><img src="./assets/Рисунок4.png" alt="Фото участника" /></div>
+                <h3 class="title">Цветков Иван Александрович</h3>
+                <p class="subtitle">Разработчик</p>
+              </div>
+              <div class="cell">
+                <div class="img-wrapper"><img src="./assets/Рисунок5.png" alt="Фото участника" /></div>
+                <h3 class="title">Тутубалин Кирилл Сергеевич</h3>
+                <p class="subtitle">Разработчик</p>
+              </div>
+              <div class="cell">
+                <div class="img-wrapper"><img src="./assets/Рисунок1.png" alt="Фото участника" /></div>
+                <h3 class="title">Власов Матвей Романович</h3>
+                <p class="subtitle">Тестировщик</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content" id="help">
+          <h3>Поддержка 24/7:</h3>
+          <p><a href="mailto:serviceoffood@mail.ru">serviceoffood@mail.ru</a></p>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
