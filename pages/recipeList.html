@@ -17,18 +17,17 @@
         <div class="nav-item">
           <a href="./byKitchens.html">по мировым кухням</a>
         </div>
-        <div class="nav-item active">
+        <div class="nav-item">
           <a href="./recipeGenerator.html">генератор рецептов</a>
         </div>
       </nav>
     </header>
 
     <main class="recipe-generator main-block">
-      <div class="block">
-        <p class="description">Нажмите, чтобы сгенерировать случайный рецепт</p>
-        <a class="btn green-block" href="./recipeList.html">Сгенерировать</a>
-      </main>
-      <div class="background"></div>
-      <script src="../js/generatorRecipes.js"></script>
+      <div class="block"></div>
+      <div class="loader"><div class="lds-dual-ring"></div></div>
+    </main>
+    <div id="observer"></div>
+    <script src="../js/recipeList.js"></script>
   </body>
 </html>

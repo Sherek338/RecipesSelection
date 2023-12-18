@@ -4,6 +4,8 @@ Recipe Generator
 
 .recipe-generator.main-block {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 0;
   background: none;
@@ -69,6 +71,7 @@ Recipe Generator
 .recipe-generator .recipe-block .info .description {
   font-size: 24px;
   font-weight: 300;
+  text-align: left;
 }
 
 .recipe-generator .recipe-block .info .title {
@@ -85,6 +88,37 @@ Recipe Generator
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.lds-dual-ring {
+  display: none;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 1200px) {
