@@ -14,8 +14,10 @@ submitBtn.addEventListener('click', (e) => {
 
   localStore.setItem('search', JSON.stringify(searchValue));
   localStore.setItem('expect', JSON.stringify(exceptValue));
-  // window.location.href = window.location.href.replace(/index.html(#help|#recipes|#logo|#about-us)/, 'pages/recipeList.html');
-  window.location.href = window.location.href.replace(/(#help|#recipes|#logo|#about-us)/, '') + 'pages/recipeList.html';
+  window.location.href = window.location.href.replace(
+    /index.html(#help|#recipes|#logo|#about-us)?/,
+    'pages/recipeList.html'
+  );
 });
 
 function isEmptyForm(value) {

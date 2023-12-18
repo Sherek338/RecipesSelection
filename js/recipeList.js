@@ -6,8 +6,6 @@ const localStorage = window.localStorage;
 const searchValue = JSON.parse(localStorage.getItem('search'));
 const exceptValue = JSON.parse(localStorage.getItem('expect'));
 
-console.log(searchValue);
-
 const loader = document.querySelector('.lds-dual-ring');
 const observerEl = document.querySelector('#observer');
 
@@ -56,7 +54,7 @@ function filterRecipes(recipes, except) {
   const recipeList = recipes.filter(
     (item) =>
       item.recipe.ingredients.filter((ingredient) =>
-        except.reduce((accum, curVal) => !ingredient.text.includes(curVal) && accum, true)
+        except.reduce((accum, curVal) => !ingredient.text.toUpperCase().includes(curVal.toUpperCase()) && accum, true)
       ).length === item.recipe.ingredients.length
   );
 
@@ -83,7 +81,6 @@ async function fetchListByKitchens(from, to) {
       if (responce.status !== 200) throw new Error(`Request failed with status code ${responce.status}`);
       const recipes = await responce.json();
 
-      console.log(recipes);
       recipeList = [...recipeList, ...recipes.hits];
     } catch (error) {
       console.log(error);
