@@ -1,130 +1,157 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <title>Food service</title>
-  </head>
-  <body>
-    <main>
-      <section class="index">
-        <section class="block">
-          <nav class="navbar">
-            <div class="nav-item logo"><a href="#logo">Logo</a></div>
-            <div class="nav-item"><a href="#about-us">About US</a></div>
-            <div class="nav-item"><a href="#help">Support</a></div>
-          </nav>
-          <h1 class="title">Cook with us!</h1>
-          <a class="btn green-block" href="#recipes">Choose a recipe</a>
-        </section>
-      </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/index.css" />
+		<title>Food service</title>
+	</head>
+	<body>
+		<main>
+			<section class="index">
+				<section class="block">
+					<nav class="navbar">
+						<div class="nav-item logo"><a href="#logo">Logo</a></div>
+						<div class="nav-item"><a href="#about-us">About US</a></div>
+						<div class="nav-item"><a href="#help">Support</a></div>
+					</nav>
+					<h1 class="title">Cook with us!</h1>
+					<a class="btn green-block" href="#recipes">Choose a recipe</a>
+				</section>
+			</section>
 
-      <div class="by-ingredients">
-        <header class="header" id="recipes">
-          <h1 class="title green-block">Recipe selection</h1>
-          <nav class="navbar">
-            <div class="nav-item active">
-              <a href="./index.html">by ingredients</a>
-            </div>
-            <div class="nav-item">
-              <a href="./pages/byKitchens.html">according to world cuisines</a>
-            </div>
-            <div class="nav-item">
-              <a href="./pages/recipeGenerator.html">recipe generator</a>
-            </div>
-          </nav>
-        </header>
+			<div class="by-ingredients">
+				<header class="header" id="recipes">
+					<h1 class="title green-block">Recipe selection</h1>
+					<nav class="navbar">
+						<div class="nav-item active">
+							<a href="./index.html">by ingredients</a>
+						</div>
+						<div class="nav-item">
+							<a href="./pages/byKitchens.html">according to world cuisines</a>
+						</div>
+						<div class="nav-item">
+							<a href="./pages/recipeGenerator.html">recipe generator</a>
+						</div>
+					</nav>
+				</header>
 
-        <section class="main-block">
-          <div class="block">
-            <p class="description">
-              Choose your products carefully! We will try to find for you how as many recipes available to you as possible.
-            </p>
-            <form class="form" method="GET">
-              <div class="inputs">
-                <label
-                  ><div class="description">Enter desired ingredients:</div>
-                  <div class="warn">
-                    <p></p>
-                  </div>
-                  <input id="search" type="text" class="input" placeholder="..."
-                /></label>
-                <label
-                  ><div class="description">Add ingredients that need to be omitted:</div>
-                  <div class="warn">
-                    <p>
-                      
-                    </p>
-                  </div>
-                  <input id="except" type="text" class="input" placeholder="..."
-                /></label>
-              </div>
-              <button type="submit" class="btn green-block">Find</button>
-            </form>
-          </div>
-        </section>
-      </div>
+				<section class="main-block">
+					<div class="block">
+						<p class="description">
+							Choose your products carefully! We will try to find for you how as
+							many recipes available to you as possible.
+						</p>
+						<form class="form" method="GET">
+							<div class="inputs">
+								<label
+									><div class="description">Enter desired ingredients:</div>
+									<div class="warn">
+										<p>*If you want to enter multiple ingredients, use (,)</p>
+									</div>
+									<input
+										id="search"
+										type="text"
+										class="input"
+										placeholder="..."
+								/></label>
+								<label
+									><div class="description">
+										Add ingredients that need to be omitted:
+									</div>
+									<div class="warn">
+										<p>If you want to exclude several ingredients, use (,)</p>
+									</div>
+									<input
+										id="except"
+										type="text"
+										class="input"
+										placeholder="..."
+								/></label>
+							</div>
+							<button type="submit" class="btn green-block">Find</button>
+						</form>
+					</div>
+				</section>
+			</div>
 
-      <div class="content-wrapper">
-        <section class="content" id="logo">
-          <h3>Logo</h3>
-          <figure class="img-wrapper">
-            <img src="./assets/Рисунок7.png" alt="Logo" />
-            <figcaption>Cuisines from all over the world on one site</figcaption>
-          </figure>
-        </section>
-        <section class="content" id="about-us">
-          <h3>our team</h3>
-          <div class="grid">
-            <div class="row">
-              <div class="cell">
-                <div class="img-wrapper"><img src="./assets/Рисунок9.png" alt="Фото участника" /></div>
-                <h3 class="title">Chezhegov Gleb Pavlovich</h3>
-                <p class="subtitle">Project Manager</p>
-              </div>
-              <div class="cell">
-                <div class="img-wrapper"><img src="./assets/Рисунок6.png" alt="Фото участника" /></div>
-                <h3 class="title">Ivanov Viktor Sergeevich</h3>
-                <p class="subtitle">Analyst</p>
-              </div>
-              <div class="cell">
-                <div class="img-wrapper"><img src="./assets/Рисунок2.png" alt="Фото участника" /></div>
-                <h3 class="title">Smirnova Karina Andreevna</h3>
-                <p class="subtitle">Manager</p>
-              </div>
-              <div class="cell">
-                <div class="img-wrapper"><img src="./assets/Рисунок3.png" alt="Фото участника" /></div>
-                <h3 class="title">Skoblilova Victoria Vasilievna</h3>
-                <p class="subtitle">UX/UI researcher</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="cell">
-                <div class="img-wrapper"><img src="./assets/Рисунок4.png" alt="Фото участника" /></div>
-                <h3 class="title">Tsvetkov Ivan Alexandrovich</h3>
-                <p class="subtitle">Developer</p>
-              </div>
-              <div class="cell">
-                <div class="img-wrapper"><img src="./assets/Рисунок5.png" alt="Фото участника" /></div>
-                <h3 class="title">Tutubalin Kirill Sergeevich</h3>
-                <p class="subtitle">Developer</p>
-              </div>
-              <div class="cell">
-                <div class="img-wrapper"><img src="./assets/Рисунок8.png" alt="Фото участника" /></div>
-                <h3 class="title">Vlasov Matvey Romanovich</h3>
-                <p class="subtitle">Tester</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="content" id="help">
-          <h3>Support 24/7:</h3>
-          <p><a href="mailto:serviceoffood@mail.ru">serviceoffood@mail.ru</a></p>
-        </section>
-      </div>
-    </main>
-    <script src="./js/index.js"></script>
-  </body>
+			<div class="content-wrapper">
+				<section class="content" id="logo">
+					<h3>Logo</h3>
+					<figure class="img-wrapper">
+						<img src="./assets/Рисунок7.png" alt="Logo" />
+						<figcaption>
+							Cuisines from all over the world on one site
+						</figcaption>
+					</figure>
+				</section>
+				<section class="content" id="about-us">
+					<h3>our team</h3>
+					<div class="grid">
+						<div class="row">
+							<div class="cell">
+								<div class="img-wrapper">
+									<img src="./assets/Рисунок9.png" alt="Фото участника" />
+								</div>
+								<h3 class="title">Chezhegov Gleb Pavlovich</h3>
+								<p class="subtitle">Project Manager</p>
+							</div>
+							<div class="cell">
+								<div class="img-wrapper">
+									<img src="./assets/Рисунок6.png" alt="Фото участника" />
+								</div>
+								<h3 class="title">Ivanov Viktor Sergeevich</h3>
+								<p class="subtitle">Analyst</p>
+							</div>
+							<div class="cell">
+								<div class="img-wrapper">
+									<img src="./assets/Рисунок2.png" alt="Фото участника" />
+								</div>
+								<h3 class="title">Smirnova Karina Andreevna</h3>
+								<p class="subtitle">Manager</p>
+							</div>
+							<div class="cell">
+								<div class="img-wrapper">
+									<img src="./assets/Рисунок3.png" alt="Фото участника" />
+								</div>
+								<h3 class="title">Skoblilova Victoria Vasilievna</h3>
+								<p class="subtitle">UX/UI researcher</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="cell">
+								<div class="img-wrapper">
+									<img src="./assets/Рисунок4.png" alt="Фото участника" />
+								</div>
+								<h3 class="title">Tsvetkov Ivan Alexandrovich</h3>
+								<p class="subtitle">Developer</p>
+							</div>
+							<div class="cell">
+								<div class="img-wrapper">
+									<img src="./assets/Рисунок5.png" alt="Фото участника" />
+								</div>
+								<h3 class="title">Tutubalin Kirill Sergeevich</h3>
+								<p class="subtitle">Developer</p>
+							</div>
+							<div class="cell">
+								<div class="img-wrapper">
+									<img src="./assets/Рисунок8.png" alt="Фото участника" />
+								</div>
+								<h3 class="title">Vlasov Matvey Romanovich</h3>
+								<p class="subtitle">Tester</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="content" id="help">
+					<h3>Support 24/7:</h3>
+					<p>
+						<a href="mailto:serviceoffood@mail.ru">serviceoffood@mail.ru</a>
+					</p>
+				</section>
+			</div>
+		</main>
+		<script src="./js/index.js"></script>
+	</body>
 </html>
