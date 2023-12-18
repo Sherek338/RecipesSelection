@@ -6,5 +6,6 @@ submitBtn.addEventListener('click', (e) => {
 
   localStore.setItem('search', JSON.stringify(''));
   localStore.setItem('expect', JSON.stringify(''));
+  localStore.setItem('fetch', JSON.stringify('generator'));
   window.location.href = window.location.href.replace(/recipeGenerator.html/, 'recipeList.html');
 });

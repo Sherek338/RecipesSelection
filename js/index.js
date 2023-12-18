@@ -14,6 +14,7 @@ submitBtn.addEventListener('click', (e) => {
 
   localStore.setItem('search', JSON.stringify(searchValue));
   localStore.setItem('expect', JSON.stringify(exceptValue));
+  localStore.setItem('fetch', JSON.stringify('ingredients'));
   window.location.href = window.location.href.replace(
     /index.html(#help|#recipes|#logo|#about-us)?/,
     'pages/recipeList.html'

@@ -13,6 +13,7 @@ submitBtn.addEventListener('click', (e) => {
 
   localStore.setItem('search', JSON.stringify(searchValue));
   localStore.setItem('expect', JSON.stringify(''));
+  localStore.setItem('fetch', JSON.stringify('kitchens'));
   window.location.href = window.location.href.replace(/byKitchens.html/, 'recipeList.html');
 });
 

@@ -5,6 +5,7 @@ const endpoint = 'https://api.edamam.com/search';
 const localStorage = window.localStorage;
 const searchValue = JSON.parse(localStorage.getItem('search'));
 const exceptValue = JSON.parse(localStorage.getItem('expect'));
+const whatFetch = JSON.parse(localStorage.getItem('fetch'));
 
 const loader = document.querySelector('.lds-dual-ring');
 const observerEl = document.querySelector('#observer');
@@ -12,16 +13,24 @@ const observerEl = document.querySelector('#observer');
 let from = 0;
 let to = 20;
 const observer = new IntersectionObserver(() => {
-  if (Array.isArray(searchValue)) fetchListByKitchens(from, to);
-  else fetchListByIngridients(from, to);
+  loader.style.display = 'block';
+  switch (whatFetch) {
+    case 'ingredients':
+      fetchListByIngridients(from, to);
+      break;
+    case 'kitchens':
+      fetchListByKitchens(from, to);
+      break;
+    case 'generator':
+      fetchListGenerator(from, to);
+      break;
+  }
   from += 20;
   to += 20;
 });
 observer.observe(observerEl);
 
 async function fetchListByIngridients(from, to) {
-  loader.style.display = 'block';
-
   const url = new URL(endpoint);
   url.searchParams.append('q', searchValue);
   url.searchParams.append('app_id', app_id);
@@ -41,8 +50,13 @@ async function fetchListByIngridients(from, to) {
 
     if (filteredRecipes.length === 0) {
       observer.disconnect(observerEl);
-      listWrapper.append((document.createElement('h2').innerHTML = 'Это все что удалось найти'));
+      if (!listWrapper.innerHTML)
+        listWrapper.append(
+          (document.createElement('h2').innerHTML = 'К сожалению, по вашему запросу ничего не найдено')
+        );
     } else filteredRecipes.forEach((recipe) => insertRecipe(listWrapper, recipe));
+
+    console.log(!listWrapper.innerHTML);
   } catch (error) {
     console.log(error);
   }
@@ -62,8 +76,6 @@ function filterRecipes(recipes, except) {
 }
 
 async function fetchListByKitchens(from, to) {
-  loader.style.display = 'block';
-
   const listWrapper = document.querySelector('.recipe-generator .block');
   let recipeList = [];
 
@@ -91,10 +103,36 @@ async function fetchListByKitchens(from, to) {
 
   if (recipeList.length === 0) {
     observer.disconnect(observerEl);
-    listWrapper.append((document.createElement('h2').innerHTML = 'Это все что удалось найти'));
+    if (!listWrapper.innerHTML)
+      listWrapper.append((document.createElement('h2').innerHTML = 'К сожалению, по вашему запросу ничего не найдено'));
   }
 
   recipeList.forEach((recipe) => insertRecipe(listWrapper, recipe));
+}
+
+async function fetchListGenerator() {
+  const url = new URL(endpoint);
+  url.searchParams.append('q', 'Balanced');
+  url.searchParams.append('app_id', app_id);
+  url.searchParams.append('app_key', app_key);
+  url.searchParams.append('from', 0);
+  url.searchParams.append('to', 100);
+
+  try {
+    const responce = await fetch(url);
+
+    if (responce.status !== 200) throw new Error(`Request failed with status code ${responce.status}`);
+    const recipes = await responce.json();
+
+    const listWrapper = document.querySelector('.recipe-generator .block');
+
+    loader.style.display = 'none';
+
+    insertRecipe(listWrapper, recipes.hits[getRandomInt(0, 100)]);
+    observer.disconnect(observerEl);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function insertRecipe(insertWrapper, recipe) {
@@ -110,9 +148,14 @@ function insertRecipe(insertWrapper, recipe) {
     <div class="info">
       <h3 class="title">${recipe.recipe.label}</h3>
       <p class="description">${recipe.recipe.summary ?? recipe.recipe.ingredientLines.join('</br>')}</p>
-      <button class="btn white-block">Смотреть</button>
     </div>
   `;
 
   insertWrapper.append(recipeHtml);
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
 }
