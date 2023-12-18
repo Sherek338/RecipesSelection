@@ -38,6 +38,11 @@ Index
   cursor: pointer;
 }
 
+.warn {
+  font-size: 14px;
+  color: rgb(205, 13, 13);
+}
+
 .index .title {
   text-align: center;
   font-size: 96px;
@@ -96,7 +101,7 @@ Index
   width: 100%;
 }
 
-.content-wrapper .content a[href^="mailto"] {
+.content-wrapper .content a[href^='mailto'] {
   text-decoration: underline;
 }
 
@@ -139,10 +144,16 @@ By Ingridients
   padding: 20px;
   border-radius: 40px;
   border: 2px solid #000;
-  margin-top: 3%;
   font-size: 24px;
   font-weight: 500;
   color: #000;
+}
+
+.by-ingredients .warn {
+  font-size: 14px;
+  color: rgb(199, 10, 10);
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 1200px) {
