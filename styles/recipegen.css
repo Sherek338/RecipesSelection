@@ -75,6 +75,7 @@ Recipe Generator
 }
 
 .recipe-generator .recipe-block .info .title {
+	font-weight: 600;
 	margin-bottom: 20px;
 }
 
